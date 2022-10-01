@@ -32,6 +32,17 @@ header > button {
   background: none;
 }
 
+#navigation {
+  visibility: hidden;
+  position: absolute;
+  top: calc(10vh + 1px);
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #49b293;
+  z-index: 9999;
+}
+
 main {
   height: 80vh;
   overflow-y: auto;

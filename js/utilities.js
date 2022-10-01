@@ -15,5 +15,4 @@ navToggle.addEventListener("click", (event) => {
     navIcon.classList.remove("fa-xmark");
     navIcon.classList.add("fa-bars");
   }
-  console.log(visibility);
 });

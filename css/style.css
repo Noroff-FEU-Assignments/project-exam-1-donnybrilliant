@@ -46,6 +46,7 @@ header > button {
 main {
   height: 80vh;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 footer {

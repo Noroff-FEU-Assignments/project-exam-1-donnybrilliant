@@ -8,6 +8,17 @@
   <title>Blog | </title>
   <link rel="stylesheet" href="./css/style.css" />
   <script src="https://kit.fontawesome.com/576cd46915.js" crossorigin="anonymous"></script>
+  <!-- Hotjar Tracking Code for https://daniel-vier-project-exam-1.netlify.app/ -->
+  <script>
+    (function (h, o, t, j, a, r) {
+      h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+      h._hjSettings = { hjid: 3183486, hjsv: 6 };
+      a = o.getElementsByTagName('head')[0];
+      r = o.createElement('script'); r.async = 1;
+      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+  </script>
 </head>
 
 <body>
@@ -28,6 +39,19 @@
   <main>
     <section class="blog-post"></section>
     <section class="comments"></section>
+
+    <dialog id="modal" class="modal">
+      <img class="modal-content" id="image">
+      <div id="caption"></div>
+    </dialog>
+
+    <!--     <button id="openModal">Show</button>
+    <dialog id="modal" class="modal">
+       <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
+    </dialog> -->
+
   </main>
   <footer>
     <span><a href="https://vierweb.no">vierweb.no</a> &copy; 2022</span>
@@ -35,5 +59,6 @@
 </body>
 <script src="./js/blogPost.js"></script>
 <script src="./js/utilities.js"></script>
+<!-- <script src="./js/modal.js"></script> -->
 
 </html>

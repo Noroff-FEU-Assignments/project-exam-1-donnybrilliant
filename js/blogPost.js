@@ -56,7 +56,48 @@ async function getPost(url) {
         `;
       });
     }
-    console.log(data);
+
+    const modal = document.querySelector("#modal");
+    const modalImage = modal.querySelector("#image");
+    const modalImageAlt = modal.querySelector("#caption");
+
+    /*     // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = blogContainer.querySelectorAll("img");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+
+    var showModal = function () {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    };
+
+    for (var i = 0; i < img.length; i++) {
+      img[i].addEventListener("click", showModal);
+    }
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal.style.display = "none";
+    }; */
+
+    const allImages = blogContainer.querySelectorAll("img");
+
+    /*     function openModal() {
+        modal.
+    } */
+
+    allImages.forEach((img) =>
+      img.addEventListener("click", () => {
+        modalImage.src = img.src;
+        modal.style.display = "block";
+      })
+    );
+
+    //console.log(allImages);
   } catch (error) {
     blogContainer.innerHTML =
       "There was an error.. See the console for more information.";

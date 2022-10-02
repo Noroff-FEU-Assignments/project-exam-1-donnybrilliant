@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog | </title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://kit.fontawesome.com/576cd46915.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">Blog</a>
+        <button id="nav-toggle" aria-controls="navigation" aria-expanded="false" aria-label="Menu">
+            <i id="nav-icon" class="fa-sharp fa-solid fa-bars"></i>
+        </button>
+    </header>
+    <nav>
+        <ul id="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog-posts.html">Blog Posts</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <form method="post"
+            action="https://vierweb.no/project-exam-1/wp-json/contact-form-7/v1/contact-forms/162/feedback">
+            <div>
+                <label for="your-name">
+                    Name
+                    <input name="your-name" id="your-name" placeholder="min 5 characters" />
+                </label>
+            </div>
+
+            <div>
+                <label for="your-email">
+                    Email
+                    <input name="your-email" id="your-email" placeholder="Enter a valid email address" />
+                </label>
+            </div>
+
+            <div>
+                <label for="your-subject">
+                    Subject
+                    <input name="your-subject" id="your-subject" placeholder="min 15 characters" />
+                </label>
+            </div>
+            <div>
+                <label for="your-message">
+                    Message
+                    <textarea name="your-message" id="your-message"
+                        placeholder="Must be more than 25 characters"></textarea>
+                </label>
+            </div>
+
+            <button id="submit" type="submit" disabled>Send</button>
+        </form>
+    </main>
+    <footer>
+        <span><a href="https://vierweb.no">vierweb.no</a> &copy; 2022</span>
+    </footer>
+</body>
+<script src="./js/contactForm.js"></script>
+<script src="./js/utilities.js"></script>
+
+</html>

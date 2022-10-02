@@ -18,12 +18,12 @@ async function getPosts(number) {
         ? post._embedded["wp:featuredmedia"][0].alt_text
         : "Photo missing";
       const commentNumber = post._embedded.replies
-        ? post._embedded.replies.length
+        ? post._embedded.replies[0].length
         : 0;
 
       postsContainer.innerHTML += `
       <article class="post">
-    
+      <a href="blog-post.html?id=${postId}">
       <img src="${postImage}" alt="${postImageAlt}" />
       <h3>${postTitle}</h3>
       <p>${postDate}</p>
@@ -32,7 +32,7 @@ async function getPosts(number) {
       <i class="fa-regular fa-comment fa-stack-2x"></i>
       <i class="fab fa-${commentNumber} fa-stack-1x"></i>
     </span>
-    
+    </a>
       </article>
       `;
 
@@ -54,6 +54,8 @@ async function getPosts(number) {
     });
     console.log(data);
   } catch (error) {
+    postsContainer.innerHTML =
+      "There was an error.. See the console for more information.";
     console.log(error);
   }
 }

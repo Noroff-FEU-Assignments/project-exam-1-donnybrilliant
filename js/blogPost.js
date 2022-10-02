@@ -61,41 +61,26 @@ async function getPost(url) {
     const modalImage = modal.querySelector("#image");
     const modalImageAlt = modal.querySelector("#caption");
 
-    /*     // Get the image and insert it inside the modal - use its "alt" text as a caption
-    var img = blogContainer.querySelectorAll("img");
-    var modalImg = document.getElementById("img01");
-    var captionText = document.getElementById("caption");
-
-    var showModal = function () {
-      modal.style.display = "block";
-      modalImg.src = this.src;
-      captionText.innerHTML = this.alt;
-    };
-
-    for (var i = 0; i < img.length; i++) {
-      img[i].addEventListener("click", showModal);
-    }
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-      modal.style.display = "none";
-    }; */
-
     const allImages = blogContainer.querySelectorAll("img");
-
-    /*     function openModal() {
-        modal.
-    } */
 
     allImages.forEach((img) =>
       img.addEventListener("click", () => {
         modalImage.src = img.src;
+        modalImage.alt = img.alt;
+        modalImageAlt.innerText = img.alt;
         modal.style.display = "block";
       })
     );
+
+    document.addEventListener("click", (event) => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+
+    document.addEventListener("keyup", (event) => {
+      if (event.code === "Escape") modal.style.display = "none";
+    });
 
     //console.log(allImages);
   } catch (error) {

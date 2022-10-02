@@ -1,26 +1,26 @@
-const allImages = document.querySelectorAll("img");
+const modal = document.querySelector("#modal");
+const modalImage = modal.querySelector("#image");
+const modalImageAlt = modal.querySelector("#caption");
 
-// allImages.forEach((img) => img.addEventListener("click", openModal()));
+const allImages = blogContainer.querySelectorAll("img");
 
-console.log(allImages);
+allImages.forEach((img) =>
+  img.addEventListener("click", () => {
+    modalImage.src = img.src;
+    modalImage.alt = img.alt;
+    modalImageAlt.innerText = img.alt;
+    modal.style.display = "block";
+  })
+);
 
-// Get the modal
-var modal = document.getElementById("myModal");
+document.addEventListener("click", (event) => {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+});
 
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById("myImg");
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
-img.onclick = function () {
-  modal.style.display = "block";
-  modalImg.src = this.src;
-  captionText.innerHTML = this.alt;
-};
+document.addEventListener("keyup", (event) => {
+  if (event.code === "Escape") modal.style.display = "none";
+});
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-  modal.style.display = "none";
-};
+//console.log(allImages);

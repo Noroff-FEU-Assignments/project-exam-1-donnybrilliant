@@ -5,7 +5,7 @@ async function getPosts(number) {
   try {
     const response = await fetch(url);
     const data = await response.json();
-    postsContainer.innerHTML = "";
+
     data.forEach((post) => {
       const postId = post.id;
       const postTitle = post.title.rendered;
@@ -21,6 +21,7 @@ async function getPosts(number) {
         ? post._embedded.replies[0].length
         : 0;
 
+      postsContainer.innerHTML = "";
       postsContainer.innerHTML += `
       <article class="post">
       <a href="blog-post.html?id=${postId}">

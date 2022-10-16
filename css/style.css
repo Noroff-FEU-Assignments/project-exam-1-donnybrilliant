@@ -186,32 +186,9 @@ h1 {
 .carousel__arrow:focus {
 }
 
-/* .featured-posts {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 2rem;
-  gap: 1rem;
-}
-
-.post {
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 24%;
-  border: 1px solid black;
-  padding: 1rem;
-  cursor: pointer;
-}
-
-.post > img {
-  width: 100%;
-  height: 30vh;
-  object-fit: cover;
-}
-
 .fa-stack {
   font-size: 0.5rem;
-} */
+}
 
 .flex {
   display: flex;
@@ -376,5 +353,30 @@ textarea {
 @media only screen and (max-width: 700px) {
   .modal-content {
     width: 100%;
+  }
+}
+
+@media only screen and (min-width: 880px) {
+  .featured-posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 2rem;
+    gap: 1rem;
+  }
+
+  .post {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 24%;
+    border: 1px solid black;
+    padding: 1rem;
+    cursor: pointer;
+  }
+
+  .post > img {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
   }
 }

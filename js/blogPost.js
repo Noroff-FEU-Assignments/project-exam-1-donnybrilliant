@@ -47,6 +47,7 @@ async function getPost(url) {
         const commentContent = comment.content.rendered;
 
         commentsContainer.innerHTML = `
+        <h2>Comments</h2>
         <div class="comment">
         <img src="${commentAuthorAvatar}" alt="${commentAuthor} avatar" />
         <p>${commentAuthor}</p>
